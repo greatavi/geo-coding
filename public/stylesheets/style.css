@@ -1,0 +1,23 @@
+body {
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+a {
+  color: #00B7FF;
+}
+#heading{
+  margin-bottom:50px;
+}
+form{
+  float:left;
+  margin-right:50px;
+}
+#map {
+  height: 500px;
+  width:500px;
+  float:left;
+}
+input{
+  margin-bottom:2px;
+}

@@ -1,0 +1,23 @@
+extends layout
+block content
+    //h1= title
+    //p Welcome to #{title}
+    .container
+        h2#heading Drop a pin by name
+    .container
+        form(onsubmit='geocode(document.getElementById("fname").value,document.getElementById("mname").value,document.getElementById("lname").value); return false;')
+            label First Name
+            br
+            input#fname(type='text', required = '')
+            br
+            label Middle Name
+            br
+            input#mname(type='text')
+            br
+            label Last Name
+            br
+            input#lname(type='text')
+            br
+            button.btn.btn-primary submit
+        #map
+    script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB7BczDllbg87CU109i4fKK9FAlolU7EXc&callback=initialLoad')
