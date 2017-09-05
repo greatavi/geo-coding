@@ -35,3 +35,9 @@ Technogolgies used:
 
 ## Start the server in the background
 `nohup sudo forever bin/www > output.log &`
+
+
+Features:
+* Input first name, middle name and last name (eg: David C Pan) and press submit.
+* The physician will be displayed on the map with a marker. On hove of this marker it will display the name
+* On click on the marker, it will display more details about the physician
