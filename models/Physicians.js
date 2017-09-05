@@ -23,20 +23,20 @@ module.exports.getSamplePhy = function (callback, limit) {
 };
 
 module.exports.getPhysicianByFname = function (fname, callback) {
-    Physician.find({"fname":fname}, callback);
+    Physician.find({"fname":{ $regex : new RegExp(fname, "i")}}, callback);
 };
 module.exports.getPhysicianByFnameMname = function (fname,mname, callback) {
-    Physician.find({"fname": fname, "mname": mname}, callback);
+    Physician.find({"fname": { $regex : new RegExp(fname, "i")}, "mname": { $regex : new RegExp(mname, "i")}}, callback);
 };
 module.exports.getPhysicianByFnameLname = function (fname,lname, callback) {
-    Physician.find({"fname": fname, "lname": lname}, callback);
+    Physician.find({"fname": { $regex : new RegExp(fname, "i")}, "lname": { $regex : new RegExp(lname, "i")}}, callback);
 };
 
 
 module.exports.getPhysicianByMname = function (mname, callback) {
-    Physician.find({"mname":mname}, callback);
+    Physician.find({"mname":{ $regex : new RegExp(mname, "i")}}, callback);
 };
 module.exports.getPhysicianByFnameMnameLname = function (fname,mname,lname, callback) {
-    Physician.find({"fname": fname, "mname": mname, "lname": lname}, callback);
+    Physician.find({"fname": { $regex : new RegExp(fname, "i")}, "mname": { $regex : new RegExp(mname, "i")}, "lname": { $regex : new RegExp(lname, "i")}}, callback);
 
 };
